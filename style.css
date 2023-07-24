@@ -1,0 +1,89 @@
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+
+
+.content {
+    width: 200px;
+    /* Largeur des divs identiques */
+    height: 500px;
+    /* Hauteur des divs identiques */
+    text-align: center;
+}
+
+.playerZone {
+    width: 550px;
+    /* Largeur des divs identiques */
+    height: 500px;
+    /* Hauteur des divs identiques */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.fa-solid {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.redPoint {
+    width: 20px;
+    height: 20px;
+    border: none;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 15px;
+}
+
+.player1Zone {
+    background-color: whitesmoke;
+}
+
+.player2Zone {
+    background-color: gainsboro;
+}
+
+.currentScore {
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 140px;
+    background-color: coral;
+}
+
+.newGame {
+    margin-top: 50px;
+}
+
+.winner {
+    margin-top: 100px;
+
+}
+
+.dice {
+    margin-top: 175px;
+}
+
+.rollDice {
+    margin-top: 320px;
+}
+
+.hold {
+    margin-top: 400px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+
+}

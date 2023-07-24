@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de dés - Evaluation Studi</title>
+
+    <!--police d'écriture-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--style.css-->
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- Première div Joueur 1 -->
+            <div class="col-md-6 player1Zone">
+                <div class="playerZone">
+                    <h1>PLAYER 1 <img class="redPoint" "vertical-align: sub" src="redPoint.png" alt="Joueur 1"
+                            id="joueur1Icone" style="display: none;" /></h1>
+                    <div class="totalScore"> <span id="scoreJoueur1Global">0</span></div>
+                    <div class="currentScore">Current <br><span id="scoreRoundJoueur1">0</span></div>
+                </div>
+            </div>
+
+            <!-- Deuxième div Joueur 2 -->
+            <div class="col-md-6 player2Zone">
+                <div class="playerZone">
+                    <h1>PLAYER 2 <img class="redPoint" "vertical-align: sub" src="redPoint.png" alt="Joueur 2"
+                            id="joueur2Icone" style="display: none;" /> </h1>
+                    <div class="totalScore"> <span id="scoreJoueur2Global">0</span></div>
+                    <div class="currentScore">Current <br><span id="scoreRoundJoueur2">0</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Div qui superpose les deux divs des joueurs : Zone de dés -->
+        <div class="overlay newGame">
+            <div class="content ">
+                <button onclick="newGame()"><i class="fa-solid fa-circle-plus"> New Game</i></button>
+            </div>
+        </div>
+        <div class="overlay winner">
+            <div id="joueurActuel"></div>
+        </div>
+
+        <div class="overlay diceFace">
+            <div class="content dice" id="resultatDe">
+            </div>
+        </div>
+        <div class="overlay rollDice">
+            <div class="content">
+                <button onclick="lancerDe()"><i class="fa-solid fa-arrows-rotate"> Roll Dice</i></button>
+            </div>
+        </div>
+        <div class="overlay hold">
+            <div class="content">
+                <button onclick="hold()"><i class="fa-solid fa-arrow-right-to-bracket"> HOLD</i></button>
+            </div>
+        </div>
+    </div>
+    <!--script-->
+    <script src="script.js"></script>
+    <!--Fontawesome-->
+    <script src="https://kit.fontawesome.com/b3d97129b8.js" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
