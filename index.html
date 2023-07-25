@@ -24,28 +24,30 @@
 
             <div class="row">
                 <!-- Première div Joueur 1 -->
-                <div class="col-md-6 player1Zone">
-                    <div class="playerZone">
-                        <h1>PLAYER 1 <img class="redPoint vertical-align: sub" src="images/redPoint.png" alt="player 1"
-                                id="player1Icone" style="display: none;" /></h1>
-                        <div class="totalScore"> <span id="scorePlayer1Global">0</span></div>
-                        <div class="currentScore">Current <br><span id="currentScorePlayer1">0</span></div>
+                <div class="col-6 text-center player1Zone">
+                    <h1 class="col-12">PLAYER 1 <img class="redPoint vertical-align: sub" src="images/redPoint.png"
+                            alt="player 1" id="player1Icone" style="display: none;" />
+                    </h1>
+                    <div class="col-12 totalScore"> <span id="scorePlayer1Global">0</span></div>
+                    <div class="mx-auto p-2 text-center currentScore">Current<br><span id="currentScorePlayer1">0</span>
                     </div>
                 </div>
 
+
                 <!-- Deuxième div Joueur 2 -->
-                <div class="col-md-6 player2Zone">
-                    <div class="playerZone">
-                        <h1>PLAYER 2 <img class="redPoint vertical-align: sub" src="images/redPoint.png" alt="player 2"
-                                id="player2Icone" style="display: none;" /> </h1>
-                        <div class="totalScore"> <span id="scorePlayer2Global">0</span></div>
-                        <div class="currentScore">Current <br><span id="currentScorePlayer2">0</span></div>
+                <div class="col-6 text-center player2Zone">
+                    <h1 class="col-12  text-center">PLAYER 2 <img class="redPoint vertical-align: sub"
+                            src="images/redPoint.png" alt="player 2" id="player2Icone" style="display: none;" /> </h1>
+                    <div class="col-12  text-center totalScore"> <span id="scorePlayer2Global">0</span></div>
+                    <div class="mx-auto p-2 text-center currentScore">
+                        Current<br><span id="currentScorePlayer2">0</span>
                     </div>
                 </div>
+
             </div>
 
             <!-- Div qui superpose les deux divs des joueurs : Zone de dés -->
-            <div class="overlay winner">
+            <div class="col-12 overlay winner">
                 <div id="currentPlayer"></div>
             </div>
 
@@ -95,16 +97,15 @@
                     <div class="modal-body">
                         <p>Le jeu est simple : <br>
                             Le jeu comprend 2 joueurs.<br>
-                            Chaque joueur possède un score temporaire (current) et un score global (GLOBAL).<br>
+                            Chaque joueur possède un score temporaire (current) et un score global (sous PLAYER).<br>
                             À chaque tour, le joueur lance un dé autant de fois qu'il le souhaite.<br>
                             Lors de son tour, le joueur peut décider à tout moment de:<br>
-                            - Cliquer sur l’option “Hold”, qui permet d’envoyer les points du ROUND vers le
-                            GLOBAL.
-                            Ce
-                            sera alors le tour de l’autre joueur.<br>
-                            - Lancer le dé. S’il obtient un 1, son score ROUND est perdu et c’est la fin de son
+                            - Cliquer sur l’option “Hold”, qui permet d’envoyer les points du "current" vers le
+                            global (sous PLAYER).
+                            Ce sera alors le tour de l’autre joueur.<br>
+                            - Lancer le dé. S’il obtient un 1, son score "current" est perdu et c’est la fin de son
                             tour.<br>
-                            Le premier joueur qui atteint les 100 points sur global gagne le jeu.
+                            Le premier joueur qui atteint les 100 points (sous PLAYER) gagne le jeu.
                         </p>
                     </div>
                     <div class="modal-footer">
