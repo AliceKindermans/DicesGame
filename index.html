@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de dés - Evaluation Studi</title>
+
+    <!--police d'écriture-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--style.css-->
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <div class="container">
+
+            <div class="row">
+                <!-- Première div Joueur 1 -->
+                <div class="col-md-6 player1Zone">
+                    <div class="playerZone">
+                        <h1>PLAYER 1 <img class="redPoint vertical-align: sub" src="images/redPoint.png" alt="player 1"
+                                id="player1Icone" style="display: none;" /></h1>
+                        <div class="totalScore"> <span id="scorePlayer1Global">0</span></div>
+                        <div class="currentScore">Current <br><span id="currentScorePlayer1">0</span></div>
+                    </div>
+                </div>
+
+                <!-- Deuxième div Joueur 2 -->
+                <div class="col-md-6 player2Zone">
+                    <div class="playerZone">
+                        <h1>PLAYER 2 <img class="redPoint vertical-align: sub" src="images/redPoint.png" alt="player 2"
+                                id="player2Icone" style="display: none;" /> </h1>
+                        <div class="totalScore"> <span id="scorePlayer2Global">0</span></div>
+                        <div class="currentScore">Current <br><span id="currentScorePlayer2">0</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Div qui superpose les deux divs des joueurs : Zone de dés -->
+            <div class="overlay winner">
+                <div id="currentPlayer"></div>
+            </div>
+
+            <div class="overlay diceFace">
+                <div class="content dice" id="resultatDe">
+                </div>
+            </div>
+            <!-- Bouton Modal RULES -->
+
+            <div class="overlay " id="rules">
+                <div class="content">
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Rules
+                    </button>
+                </div>
+            </div>
+            <!-- Bouton NEW GAME -->
+
+            <div class="overlay newGame">
+                <div class="content">
+                    <button onclick="newGame()"><i class="fa-solid fa-circle-plus"> New Game</i></button>
+                </div>
+            </div>
+            <!-- Bouton ROLL -->
+
+            <div class="overlay rollDice">
+                <div class="content">
+                    <button onclick="lancerDe()"><i class="fa-solid fa-arrows-rotate"> Roll Dice</i></button>
+                </div>
+            </div>
+            <!-- Bouton HOLD -->
+            <div class="overlay hold">
+                <div class="content">
+                    <button onclick="hold()"><i class="fa-solid fa-arrow-right-to-bracket"> HOLD</i></button>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Règles du jeu</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Le jeu est simple : <br>
+                            Le jeu comprend 2 joueurs.<br>
+                            Chaque joueur possède un score temporaire (current) et un score global (GLOBAL).<br>
+                            À chaque tour, le joueur lance un dé autant de fois qu'il le souhaite.<br>
+                            Lors de son tour, le joueur peut décider à tout moment de:<br>
+                            - Cliquer sur l’option “Hold”, qui permet d’envoyer les points du ROUND vers le
+                            GLOBAL.
+                            Ce
+                            sera alors le tour de l’autre joueur.<br>
+                            - Lancer le dé. S’il obtient un 1, son score ROUND est perdu et c’est la fin de son
+                            tour.<br>
+                            Le premier joueur qui atteint les 100 points sur global gagne le jeu.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--script-->
+    <script src="script.js"></script>
+    <!--Fontawesome-->
+    <script src="https://kit.fontawesome.com/b3d97129b8.js" crossorigin="anonymous"></script>
+
+    <!--bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
