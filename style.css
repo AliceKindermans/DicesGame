@@ -48,8 +48,10 @@
 
 }
 
+
+
 .currentScore {
-    margin-top: 150px;
+    margin-top: 170px;
     height: 100px;
     width: 140px;
     background-color: coral;
@@ -69,15 +71,15 @@
 }
 
 .dice {
-    margin-top: 130px;
+    margin-top: 150px;
 }
 
 .rollDice {
-    margin-top: 340px;
+    margin-top: 370px;
 }
 
 .hold {
-    margin-top: 400px;
+    margin-top: 420px;
 }
 
 img {
